@@ -202,19 +202,19 @@ namespace BD
                 {
                     await exec.OpenAsync();
 
-                    var result = exec.QueryFirstAsync<T>(sql: sp, param: Param, commandType: System.Data.CommandType.StoredProcedure
+                    var result = exec.QueryFirstOrDefaultAsync<T>(sql: sp, param: Param, commandType: System.Data.CommandType.StoredProcedure
                         , commandTimeout: Timeout);
 
                     return await result;
                 }
 
             }
-	        catch (global::System.Exception)
-	        {
+            catch (global::System.Exception)
+            {
 
-       		throw;
-	        }
-}
+                throw;
+            }
+        }
 
         public async Task<DbEntity> ExecuteAsync(string sp, object Param = null, int? Timeout = null)
         {
