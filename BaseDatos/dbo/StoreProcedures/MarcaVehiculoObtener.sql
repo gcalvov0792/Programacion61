@@ -10,5 +10,7 @@ AS
       ,	Descripcion
 	  , Estado
 	FROM MarcaVehiculo
+	WHERE (@MarcaVehiculoId IS NULL OR MarcaVehiculoId=@MarcaVehiculoId)
+
 
 	END
