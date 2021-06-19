@@ -11,8 +11,11 @@ namespace WBL
 {
     public interface IMarcaVehiculoService
     {
+        Task<DbEntity> Create(MarcaVehiculoEntity entity);
+        Task<DbEntity> Delete(MarcaVehiculoEntity entity);
         Task<IEnumerable<MarcaVehiculoEntity>> Get();
         Task<MarcaVehiculoEntity> GetById(MarcaVehiculoEntity entity);
+        Task<DbEntity> Update(MarcaVehiculoEntity entity);
     }
 
     public class MarcaVehiculoService : IMarcaVehiculoService
