@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[MarcaVehiculo]
 (
-	MarcaVehiculoId INT NOT NULL IDENTITY(1,1) CONSTRAINT PK_MarcaVehiculo PRIMARY KEY CLUSTERED (MarcaVehiculoid)
+	MarcaVehiculoId INT NOT NULL IDENTITY(1,1) CONSTRAINT PK_MarcaVehiculo PRIMARY KEY CLUSTERED (MarcaVehiculoId)
   , Descripcion VARCHAR(250) NOT NULL
   , Estado BIT NOT NULL
 )
